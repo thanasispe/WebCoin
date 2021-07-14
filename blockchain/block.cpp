@@ -1,16 +1,6 @@
 #include <stdio.h>
 
-class Block{
-    public:
-        Block(int index, char * data, char * prevhash);
-        bool notNull = true;
-    private:
-        int index;
-        char data[80];
-        char hash[590];
-        char prevhash[590];
-        
-};
+#include "block.h"
 
 Block::Block(int index, char indata[80], char inprevhash[590]){
     this->index = index;
@@ -26,4 +16,10 @@ Block::Block(int index, char indata[80], char inprevhash[590]){
     if (data != NULL && index != NULL){
         notNull = true;
     }
+
+    
+}
+
+char * Block::getHash(){
+    return hash;
 }

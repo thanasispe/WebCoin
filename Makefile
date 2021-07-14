@@ -1,7 +1,7 @@
 CC ?= g++
-MAIN ?= main.cpp
+MAIN ?= main.cpp  
 FLAG ?= -Wall
-TARGET ?= kyr
+TARGET ?= WebCoin
 
 $(TARGET): $(MAIN)
 	$(CC) $(FLAG) $(MAIN) -o $(TARGET)
