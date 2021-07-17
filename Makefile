@@ -1,11 +1,13 @@
 CC ?= g++
-MAIN ?= main.cpp  
+SOURCES ?= $(wildcard ./src/*.cpp)
 FLAG ?= -Wall
 TARGET ?= WebCoin
+BINDIR ?= ./bin
 
 $(TARGET): $(MAIN)
-	$(CC) $(FLAG) $(MAIN) -o $(TARGET)
+	$(CC) $(FLAG) $(SOURCES) -o $(BINDIR)/$(TARGET)
 
 clear: $(TARGET)
 	rm $(TARGET)
-	
+
+.PHONY: clear
